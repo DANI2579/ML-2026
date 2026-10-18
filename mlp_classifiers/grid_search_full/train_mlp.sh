@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --job-name=mlp-grid-search
 #SBATCH -p short
-#SBATCH --array=0-41%10
+#SBATCH --array=0-54%10
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=4G
-#SBATCH --time=05:00:00
+#SBATCH --time=15:00:00
 #SBATCH --output=logs/train_%A_%a.log
 
 echo "Job ID: $SLURM_JOB_ID"
