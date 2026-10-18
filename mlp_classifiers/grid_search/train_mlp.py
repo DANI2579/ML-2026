@@ -68,15 +68,14 @@ def train_mlp_classifier(train_Xy,val_Xy,hidden_layers=[20]*3,acc_tol=1e-2,patie
         if no_improv > patience:
             break
     # print last epoch for the logs
-    print("Last epoch:",epoch)
     # either way, return
     model.load_state_dict(best_state)
-    return model, best_acc
+    return model, best_acc, epoch
 
 
-def train_and_save(code,depth,width,batch_size,learning_rate=5e-3):
+def train_and_save(internal_idx,external_idx,depth,width,batch_size,learning_rate=5e-3):
     hidden_layers = [width]*depth
-    model, best_val_acc = train_mlp_classifier(
+    model, val_acc, last_epoch = train_mlp_classifier(
         train_Xy = data["train"],
         val_Xy = data["val"],
         hidden_layers = hidden_layers,
@@ -85,7 +84,15 @@ def train_and_save(code,depth,width,batch_size,learning_rate=5e-3):
         max_epochs = 200,
         progress = True
     )
-    torch.save(model.state_dict(),f"results/mlp_{code}.pt")
+    # measure on test, finally and only once
+    model.eval()
+    with torch.no_grad():
+        for X,y in test_loader:
+            y_pred = model(X).argmax(axis=1)
+            test_acc = balanced_accuracy_score(y,y_pred)
+    # save the model
+    torch.save(model.state_dict(),f"models/mlp_{internal_idx}_{external_idx}.pt")
+    return val_acc, test_acc, last_epoch
 
 
 
@@ -98,32 +105,43 @@ for name in ["train","test","val"]:
     )
 
 
+test_loader = make_dataloader(*data["test"],batch_size=len(data["test"][1]))
+
 depths = np.unique(np.logspace(0,1.1,7,dtype=int)).tolist()
 widths = [5, 10, 15, 25, 30, 40, 50] #np.unique(np.logspace(0.7,1.55,8,dtype=int)).tolist()
-batch_sizes = [100, 200, 300, 500, 700]    # np.logspace(2,2.9,5,dtype=int).tolist()
 
-grid = ParameterGrid({
+external_grid = ParameterGrid({
     "depth":depths,
     "width":widths,
 })
 
+batch_sizes = [100, 200, 300, 500, 700] #np.logspace(2,2.9,5,dtype=int).tolist()
+learning_rates = [1e-4,5e-4,1e-3,5e-3,8e-3]
+
+internal_grid = ParameterGrid({
+    "learning_rate":learning_rates,
+    "batch_size":batch_sizes
+})
 
 if __name__ == "__main__":
     torch.set_num_threads(int(os.environ["SLURM_CPUS_PER_TASK"]))
-    idx = int(os.environ["SLURM_ARRAY_TASK_ID"])
-    config = grid[idx]
-    print(config)
+    external_idx = int(os.environ["SLURM_ARRAY_TASK_ID"])
+    depth_width = external_grid[external_idx]
+    print(depth_width)
 
-    for bs in batch_sizes:
+    for (internal_idx, bs_lr) in enumerate(internal_grid):
         try:
-            # a simple spell, yet powerful
-            start = time()
-            code = f"{idx}_bs{bs}"
-            print(code)
-            train_and_save(code,**config,batch_size=bs)
-            print("training time:",time()-start)
+            start = time() # a simple spell, yet powerful
+            val_acc, test_acc, last_epoch = train_and_save(internal_idx,external_idx,**depth_width,**bs_lr)
+            training_time = time()-start
+
+            with open(f"stats/{external_idx}.csv","a") as file:
+                file.write(f"{internal_idx},{external_idx},{val_acc},{test_acc},{last_epoch},{training_time}\n")
+
         except Exception as e:
             print(e)
+            with open(f"stats/{external_idx}.csv","a") as file:
+                file.write(f"{internal_idx},{external_idx},,,\n")
 
 
     
