@@ -1,0 +1,44 @@
+Job ID: 776933
+Node:   nodei-10
+CPUs:   4
+Start:  Sun Oct 18 12:16:18 -05 2026
+Traceback (most recent call last):
+  File "/hpcfs/home/fisica/s.henao10/ML-2026/mlp_classifiers/grid_search_full/train_mlp.py", line 12, in <module>
+    from sklearn.metrics import balanced_accuracy_score
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/__init__.py", line 70, in <module>
+    from sklearn.base import clone  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/base.py", line 20, in <module>
+    from sklearn.utils._metadata_requests import _MetadataRequester, _routing_enabled
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/__init__.py", line 9, in <module>
+    from sklearn.utils._chunking import gen_batches, gen_even_slices
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from sklearn.utils._param_validation import Interval, validate_params
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/_param_validation.py", line 17, in <module>
+    from sklearn.utils.validation import _is_arraylike_not_scalar
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/validation.py", line 24, in <module>
+    from sklearn.utils._array_api import (
+    ...<6 lines>...
+    )
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/_array_api.py", line 20, in <module>
+    from sklearn.externals import array_api_extra as xpx
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/externals/array_api_extra/__init__.py", line 3, in <module>
+    from . import testing
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/externals/array_api_extra/testing/__init__.py", line 3, in <module>
+    from ._testing import (
+    ...<6 lines>...
+    )
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/externals/array_api_extra/testing/_testing.py", line 16, in <module>
+    from .._lib import _compat, _helpers
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/externals/array_api_extra/_lib/_compat.py", line 7, in <module>
+    from ..._array_api_compat_vendor import (
+    ...<20 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 872, in get_code
+  File "<frozen importlib._bootstrap_external>", line 954, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/externals/_array_api_compat_vendor.py'
+End:    Sun Oct 18 12:16:30 -05 2026

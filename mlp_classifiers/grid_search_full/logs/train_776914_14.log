@@ -1,0 +1,62 @@
+Job ID: 776929
+Node:   nodei-10
+CPUs:   4
+Start:  Sun Oct 18 12:16:16 -05 2026
+Traceback (most recent call last):
+  File "/hpcfs/home/fisica/s.henao10/ML-2026/mlp_classifiers/grid_search_full/train_mlp.py", line 12, in <module>
+    from sklearn.metrics import balanced_accuracy_score
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/__init__.py", line 70, in <module>
+    from sklearn.base import clone  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/base.py", line 20, in <module>
+    from sklearn.utils._metadata_requests import _MetadataRequester, _routing_enabled
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/__init__.py", line 9, in <module>
+    from sklearn.utils._chunking import gen_batches, gen_even_slices
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from sklearn.utils._param_validation import Interval, validate_params
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/_param_validation.py", line 17, in <module>
+    from sklearn.utils.validation import _is_arraylike_not_scalar
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/validation.py", line 24, in <module>
+    from sklearn.utils._array_api import (
+    ...<6 lines>...
+    )
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/_array_api.py", line 23, in <module>
+    from sklearn.utils.fixes import parse_version
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/fixes.py", line 19, in <module>
+    import pandas as pd
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/pandas/__init__.py", line 46, in <module>
+    from pandas.core.api import (
+    ...<61 lines>...
+    )
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/pandas/core/api.py", line 46, in <module>
+    from pandas.core.groupby import (
+    ...<2 lines>...
+    )
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+    ...<3 lines>...
+    )
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/pandas/core/groupby/generic.py", line 64, in <module>
+    from pandas.core.frame import DataFrame
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/pandas/core/frame.py", line 154, in <module>
+    from pandas.core.generic import NDFrame
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/pandas/core/generic.py", line 167, in <module>
+    from pandas.core.internals import BlockManager
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/pandas/core/internals/__init__.py", line 2, in <module>
+    from pandas.core.internals.concat import concatenate_managers
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/pandas/core/internals/concat.py", line 36, in <module>
+    from pandas.core.internals.managers import (
+    ...<2 lines>...
+    )
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/pandas/core/internals/managers.py", line 91, in <module>
+    from pandas.core.internals.ops import (
+    ...<2 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 872, in get_code
+  File "<frozen importlib._bootstrap_external>", line 954, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/pandas/core/internals/ops.py'
+End:    Sun Oct 18 12:16:35 -05 2026

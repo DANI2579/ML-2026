@@ -1,0 +1,1 @@
+internal_idx,external_idx,val_acc,test_acc,last_epoch,training_time,depth,width,lr,bs

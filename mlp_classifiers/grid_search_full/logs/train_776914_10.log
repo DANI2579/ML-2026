@@ -1,0 +1,27 @@
+Job ID: 776925
+Node:   nodei-9
+CPUs:   4
+Start:  Sun Oct 18 12:16:16 -05 2026
+Traceback (most recent call last):
+  File "/hpcfs/home/fisica/s.henao10/ML-2026/mlp_classifiers/grid_search_full/train_mlp.py", line 6, in <module>
+    import numpy as np
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/__init__.py", line 109, in <module>
+    from numpy.__config__ import show_config
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/__config__.py", line 4, in <module>
+    from numpy._core._multiarray_umath import (
+    ...<3 lines>...
+    )
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/_core/__init__.py", line 111, in <module>
+    from . import einsumfunc, fromnumeric, function_base, getlimits, numeric, shape_base
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/_core/einsumfunc.py", line 10, in <module>
+    from numpy._core.numeric import asanyarray, reshape
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/_core/numeric.py", line 2694, in <module>
+    from . import _asarray, _ufunc_config, arrayprint, fromnumeric
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 872, in get_code
+  File "<frozen importlib._bootstrap_external>", line 954, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/_core/_asarray.py'
+End:    Sun Oct 18 12:16:18 -05 2026

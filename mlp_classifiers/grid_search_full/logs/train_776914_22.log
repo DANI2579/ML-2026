@@ -1,0 +1,7 @@
+Job ID: 776937
+Node:   nodei-10
+CPUs:   4
+Start:  Sun Oct 18 12:16:30 -05 2026
+warning  libmamba failed to open /hpcfs/home/fisica/s.henao10/.cache/mamba/proc/1936778.json
+{'width': 400, 'depth': 6}
+End:    Sun Oct 18 12:16:39 -05 2026

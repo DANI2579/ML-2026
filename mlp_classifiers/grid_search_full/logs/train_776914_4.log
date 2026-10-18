@@ -1,0 +1,9 @@
+Job ID: 776919
+Node:   nodei-2
+CPUs:   4
+Start:  Sun Oct 18 12:16:15 -05 2026
+error    libmamba Could not set lock (Resource temporarily unavailable)
+warning  libmamba Cannot lock '/hpcfs/home/fisica/s.henao10/.cache/mamba/proc'
+    Waiting for other mamba process to finish
+{'width': 400, 'depth': 8}
+End:    Sun Oct 18 12:16:36 -05 2026

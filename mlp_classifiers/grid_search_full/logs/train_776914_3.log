@@ -1,0 +1,62 @@
+Job ID: 776918
+Node:   nodei-2
+CPUs:   4
+Start:  Sun Oct 18 12:16:15 -05 2026
+error    libmamba Could not set lock (Resource temporarily unavailable)
+warning  libmamba Cannot lock '/hpcfs/home/fisica/s.henao10/.cache/mamba/proc'
+    Waiting for other mamba process to finish
+Traceback (most recent call last):
+  File "/hpcfs/home/fisica/s.henao10/ML-2026/mlp_classifiers/grid_search_full/train_mlp.py", line 12, in <module>
+    from sklearn.metrics import balanced_accuracy_score
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/__init__.py", line 70, in <module>
+    from sklearn.base import clone  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/base.py", line 20, in <module>
+    from sklearn.utils._metadata_requests import _MetadataRequester, _routing_enabled
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/__init__.py", line 9, in <module>
+    from sklearn.utils._chunking import gen_batches, gen_even_slices
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from sklearn.utils._param_validation import Interval, validate_params
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/sklearn/utils/_param_validation.py", line 14, in <module>
+    from scipy.sparse import csr_array, issparse
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/scipy/sparse/__init__.py", line 251, in <module>
+    from ._csr import *
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/scipy/sparse/_csr.py", line 15, in <module>
+    from ._compressed import _cs_matrix
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/scipy/sparse/_compressed.py", line 8, in <module>
+    from scipy._lib._util import _prune_array, copy_if_needed
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/scipy/_lib/_util.py", line 16, in <module>
+    from scipy._lib._array_api import (Array, array_namespace, is_lazy_array, is_numpy,
+                                       is_marray, xp_size, xp_result_device, xp_result_type)
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/scipy/_lib/_array_api.py", line 24, in <module>
+    from scipy._external.array_api_compat import (
+    ...<17 lines>...
+    )
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/scipy/_external/array_api_compat/numpy/__init__.py", line 9, in <module>
+    __all__ = clone_module("numpy", globals())
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/scipy/_external/array_api_compat/_internal.py", line 64, in clone_module
+    exec(f"from {mod.__name__} import *", objs)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 1, in <module>
+  File "<frozen importlib._bootstrap>", line 1429, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 1431, in _handle_fromlist
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/__init__.py", line 735, in __getattr__
+    import numpy.f2py as f2py
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/f2py/__init__.py", line 19, in <module>
+    from . import diagnose, f2py2e
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/f2py/f2py2e.py", line 21, in <module>
+    from . import (
+    ...<8 lines>...
+    )
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/f2py/rules.py", line 56, in <module>
+    from . import (
+    ...<7 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 872, in get_code
+  File "<frozen importlib._bootstrap_external>", line 954, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/f2py/use_rules.py'
+End:    Sun Oct 18 12:16:29 -05 2026

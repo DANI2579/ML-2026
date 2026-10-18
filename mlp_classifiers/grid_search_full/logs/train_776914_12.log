@@ -1,0 +1,25 @@
+Job ID: 776927
+Node:   nodei-10
+CPUs:   4
+Start:  Sun Oct 18 12:16:16 -05 2026
+Traceback (most recent call last):
+  File "/hpcfs/home/fisica/s.henao10/ML-2026/mlp_classifiers/grid_search_full/train_mlp.py", line 6, in <module>
+    import numpy as np
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/__init__.py", line 454, in <module>
+    from . import lib, matrixlib as _mat
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/lib/__init__.py", line 18, in <module>
+    from . import (
+    ...<23 lines>...
+    )
+  File "/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/lib/scimath.py", line 1, in <module>
+    from ._scimath_impl import (  # noqa: F401
+    ...<11 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 872, in get_code
+  File "<frozen importlib._bootstrap_external>", line 954, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/hpcfs/home/fisica/s.henao10/micromamba/envs/torch_2026/lib/python3.14/site-packages/numpy/lib/_scimath_impl.py'
+End:    Sun Oct 18 12:16:18 -05 2026

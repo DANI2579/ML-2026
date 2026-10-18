@@ -1,0 +1,24 @@
+Job ID: 776945
+Node:   nodei-10
+CPUs:   4
+Start:  Sun Oct 18 12:16:36 -05 2026
+error    libmamba Could not set lock (Resource temporarily unavailable)
+warning  libmamba Cannot lock '/hpcfs/home/fisica/s.henao10/.cache/mamba/proc'
+    Waiting for other mamba process to finish
+{'width': 60, 'depth': 6}
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   8%|▊         | 24/300 [00:07<01:29,  3.09it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:  10%|█         | 30/300 [00:08<01:18,  3.42it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   7%|▋         | 20/300 [00:05<01:20,  3.46it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   8%|▊         | 25/300 [00:06<01:09,  3.95it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   8%|▊         | 24/300 [00:06<01:12,  3.83it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   9%|▉         | 28/300 [00:07<01:08,  3.99it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   9%|▉         | 27/300 [00:05<00:55,  4.93it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   8%|▊         | 25/300 [00:04<00:52,  5.27it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   7%|▋         | 22/300 [00:04<00:53,  5.16it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   8%|▊         | 23/300 [00:03<00:42,  6.50it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   9%|▉         | 27/300 [00:04<00:42,  6.40it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:  11%|█         | 33/300 [00:05<00:43,  6.20it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   7%|▋         | 20/300 [00:02<00:34,  8.15it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:  11%|█▏        | 34/300 [00:04<00:33,  8.03it/s]
+Epoch:   0%|          | 0/300 [00:00<?, ?it/s]Epoch:   8%|▊         | 23/300 [00:02<00:32,  8.44it/s]
+End:    Sun Oct 18 12:18:05 -05 2026

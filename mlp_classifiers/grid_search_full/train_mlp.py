@@ -107,16 +107,17 @@ for name in ["train","test","val"]:
 
 test_loader = make_dataloader(*data["test"],batch_size=len(data["test"][1]))
 
-depths = [1, 2, 3, 5, 8]
-widths = [5, 10, 15, 25, 30, 40, 50, 60, 80, 100, 150] 
+depths = [1, 2, 3, 5, 6, 8][::-1]
+widths = [10,20,30,40, 50, 60, 80, 100, 150, 200, 250, 300, 350, 400, 500, 750, 900, 1000][::-1]
+
 
 external_grid = ParameterGrid({
     "depth":depths,
     "width":widths,
 })
 
-batch_sizes = [80, 100, 150, 200, 300, 500] 
-learning_rates = [1e-3,3e-3,5e-3,8e-3]
+batch_sizes = [80, 100, 150, 200, 300] 
+learning_rates = [3e-3,5e-3,8e-3]
 
 internal_grid = ParameterGrid({
     "learning_rate":learning_rates,
@@ -129,20 +130,28 @@ if __name__ == "__main__":
     depth_width = external_grid[external_idx]
     print(depth_width)
 
+    out_path = f"stats/{external_idx}.csv"
+    if not os.path.exists(out_path):
+        with open(out_path,"w") as file:
+            file.write(f"internal_idx,external_idx,val_acc,test_acc,last_epoch,training_time,depth,width,lr,bs\n")
+
+
     for (internal_idx, bs_lr) in enumerate(internal_grid):
+        depth = depth_width["depth"]
+        width = depth_width["width"]
+        bs = bs_lr["batch_size"]
+        lr = bs_lr["learning_rate"]
         try:
-            if depth_width["depth"]*depth_width["width"] < 700:
+            if depth*width <= 1050: # do not train mlp with more than 1050 neurons
                 start = time() # a simple spell, yet powerful
                 val_acc, test_acc, last_epoch = train_and_save(internal_idx,external_idx,**depth_width,**bs_lr)
                 training_time = time()-start
 
-                with open(f"stats/{external_idx}.csv","a") as file:
-                    file.write(f"{internal_idx},{external_idx},{val_acc},{test_acc},{last_epoch},{training_time}\n")
+                with open(out_path,"a") as file:
+                    file.write(f"{internal_idx},{external_idx},{val_acc},{test_acc},{last_epoch},{training_time},{depth},{width},{lr},{bs}\n")
 
         except Exception as e:
             print(e)
-            with open(f"stats/{external_idx}.csv","a") as file:
-                file.write(f"{internal_idx},{external_idx},,,\n")
 
 
     
