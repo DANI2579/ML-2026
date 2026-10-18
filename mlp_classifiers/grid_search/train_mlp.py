@@ -85,7 +85,7 @@ def train_and_save(code,depth,width,batch_size,learning_rate=5e-3):
         max_epochs = 200,
         progress = True
     )
-    torch.save(model.state_dict(),f"results/mlp_{code:02d}.pt")
+    torch.save(model.state_dict(),f"results/mlp_{code}.pt")
 
 
 
@@ -98,25 +98,32 @@ for name in ["train","test","val"]:
     )
 
 
-depths = np.unique(np.logspace(0,1.1,7,dtype=int))
-widths = np.unique(np.logspace(0.7,1.55,8,dtype=int))
-batch_sizes = np.logspace(2,2.9,5,dtype=int)
+depths = np.unique(np.logspace(0,1.1,7,dtype=int)).tolist()
+widths = [5, 10, 15, 25, 30, 40, 50] #np.unique(np.logspace(0.7,1.55,8,dtype=int)).tolist()
+batch_sizes = [100, 200, 300, 500, 700]    # np.logspace(2,2.9,5,dtype=int).tolist()
 
 grid = ParameterGrid({
     "depth":depths,
     "width":widths,
-    "batch_size":batch_sizes
 })
 
 
 if __name__ == "__main__":
     torch.set_num_threads(int(os.environ["SLURM_CPUS_PER_TASK"]))
-    code = int(os.environ["SLURM_ARRAY_TASK_ID"])
-    config = grid[code]
-    # very rudimentary I know
-    # a spell simple yet powerful
-    start = time()
-    train_and_save(code,**config)
-    print("training time:",time()-start)
-    
+    idx = int(os.environ["SLURM_ARRAY_TASK_ID"])
+    config = grid[idx]
+    print(config)
+
+    for bs in batch_sizes:
+        try:
+            # a simple spell, yet powerful
+            start = time()
+            code = f"{idx}_bs{bs}"
+            print(code)
+            train_and_save(code,**config,batch_size=bs)
+            print("training time:",time()-start)
+        except Exception as e:
+            print(e)
+
+
     
