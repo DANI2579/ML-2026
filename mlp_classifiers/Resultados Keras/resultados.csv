@@ -1,0 +1,71 @@
+capas,configuracion,nombre optimizador,Optimizador,learning_rate,batch_size,loss,accuracy
+3,"(64, 64, 32)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.0001,32,1.3386075496673584,0.44045910239219666
+2,"(16, 16)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.01,16,0.811804473400116,0.7051649689674377
+3,"(256, 16, 16)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.1,128,0.815579354763031,0.702654242515564
+2,"(16, 32)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.0001,128,0.9042472839355469,0.6682209372520447
+3,"(256, 16, 256)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.001,16,0.8321676850318909,0.7030128836631775
+3,"(16, 16, 64)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.0001,32,0.857886016368866,0.6911764740943909
+3,"(32, 128, 16)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.0001,32,1.3971116542816162,0.43615496158599854
+3,"(32, 128, 256)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.0001,64,1.419053316116333,0.40925395488739014
+3,"(256, 16, 32)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.1,16,0.8254536986351013,0.7123385667800903
+3,"(16, 16, 64)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.0001,128,1.5963163375854492,0.25860831141471863
+3,"(32, 64, 16)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.001,32,0.858396589756012,0.6897417306900024
+3,"(64, 128, 64)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.001,128,0.8129059076309204,0.7037302851676941
+3,"(32, 64, 16)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.001,16,0.8202254772186279,0.6972740292549133
+3,"(64, 256, 128)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.0001,128,0.8016590476036072,0.7101865410804749
+3,"(128, 32, 16)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.001,64,0.8013132214546204,0.7065997123718262
+3,"(256, 64, 16)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.001,32,0.8546127080917358,0.6875896453857422
+2,"(16, 32)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.001,64,1.0501291751861572,0.5914633870124817
+3,"(64, 16, 16)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.0001,16,1.2554579973220825,0.4964132010936737
+3,"(64, 16, 128)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.01,32,0.8615621328353882,0.7030128836631775
+2,"(64, 32)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.1,32,1.3518880605697632,0.4121233820915222
+3,"(16, 16, 16)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.0001,64,0.8908904194831848,0.6657102108001709
+2,"(256, 16)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.1,128,1.5792807340621948,0.273672878742218
+2,"(32, 64)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.01,16,0.8741363883018494,0.6886656880378723
+3,"(256, 256, 128)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.001,16,0.8163424134254456,0.700860857963562
+3,"(32, 16, 32)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.001,16,0.826187789440155,0.6990674138069153
+3,"(256, 256, 64)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.0001,32,0.7884459495544434,0.7144906520843506
+3,"(16, 128, 16)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.0001,32,1.3673441410064697,0.45624104142189026
+3,"(64, 128, 128)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.01,16,0.8422992825508118,0.6994261145591736
+3,"(32, 32, 64)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.001,128,0.7995139360427856,0.7030128836631775
+2,"(128, 32)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.1,16,1.580922245979309,0.273672878742218
+3,"(128, 16, 32)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.1,16,0.8213557600975037,0.7033715844154358
+3,"(128, 16, 32)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.0001,16,0.8004624247550964,0.7058823704719543
+3,"(32, 32, 64)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.1,128,1.2131847143173218,0.5412482023239136
+3,"(64, 32, 256)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.01,16,0.799710214138031,0.7098278403282166
+3,"(32, 256, 32)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.0001,32,1.2767335176467896,0.46269726753234863
+3,"(256, 16, 128)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.01,128,0.8142849802970886,0.7058823704719543
+3,"(32, 128, 32)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.001,16,0.8511160016059875,0.6883070468902588
+1,"(64,)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.0001,16,1.0898191928863525,0.5964849591255188
+3,"(16, 128, 16)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.001,32,0.9144253730773926,0.6639167666435242
+3,"(16, 32, 64)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.1,16,1.312241554260254,0.3723098933696747
+2,"(32, 32)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.01,16,0.8688052296638489,0.6796987056732178
+3,"(16, 128, 16)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.1,32,1.5822631120681763,0.273672878742218
+3,"(32, 256, 16)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.0001,32,1.3088358640670776,0.4838593900203705
+3,"(16, 16, 32)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.0001,64,0.8957279324531555,0.6700143218040466
+3,"(256, 16, 16)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.1,128,1.5793240070343018,0.273672878742218
+3,"(16, 256, 128)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.01,32,0.8189094662666321,0.6958392858505249
+3,"(128, 64, 16)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.01,32,0.9924615621566772,0.6710903644561768
+2,"(32, 64)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.1,128,0.8124077916145325,0.7044476270675659
+3,"(128, 128, 256)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.001,16,0.8467172384262085,0.702654242515564
+3,"(64, 128, 16)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.1,128,1.5779147148132324,0.273672878742218
+3,"(256, 256, 64)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.0001,128,1.4613046646118164,0.3895265460014343
+3,"(64, 64, 64)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.001,32,0.8962808847427368,0.668579638004303
+1,"(256,)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.01,32,0.9723337292671204,0.6696556806564331
+3,"(16, 32, 64)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.01,64,0.8378663659095764,0.6936872601509094
+3,"(16, 32, 64)",SGD,<class 'keras.src.optimizers.sgd.SGD'>,0.0001,128,1.5352394580841064,0.3159971237182617
+3,"(256, 16, 32)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.001,128,0.9262234568595886,0.666786253452301
+3,"(64, 16, 64)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.001,32,0.7948998212814331,0.7141320109367371
+3,"(256, 128, 128)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.0001,128,0.7929450869560242,0.7105451822280884
+3,"(64, 16, 32)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.0001,32,1.45719575881958,0.41284075379371643
+2,"(32, 128)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.0001,128,0.8574439287185669,0.6861549615859985
+3,"(32, 16, 32)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.01,16,0.8834426999092102,0.6947632431983948
+3,"(128, 128, 128)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.001,32,0.8559615015983582,0.7094691395759583
+3,"(16, 256, 256)",Adagrad,<class 'keras.src.optimizers.adagrad.Adagrad'>,0.01,16,0.8177182078361511,0.7033715844154358
+3,"(32, 32, 16)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.001,32,0.8434244394302368,0.6965566873550415
+3,"(256, 64, 256)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.001,64,0.8232011795043945,0.6954806447029114
+3,"(128, 16, 128)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.0001,64,0.8096052408218384,0.6997848153114319
+3,"(256, 256, 32)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.01,64,0.841545581817627,0.7087517976760864
+3,"(32, 128, 256)",AdamW,<class 'keras.src.optimizers.adamw.AdamW'>,0.01,32,0.8857492804527283,0.7001434564590454
+3,"(32, 256, 32)",RMSprop,<class 'keras.src.optimizers.rmsprop.RMSprop'>,0.1,32,1.5822631120681763,0.273672878742218
+1,"(256,)",Adam,<class 'keras.src.optimizers.adam.Adam'>,0.001,32,0.7931113243103027,0.7134146094322205
